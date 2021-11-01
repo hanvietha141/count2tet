@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg1: #9b59b6;
+    --bg2: #3498db;
+    --text: #26ade4;
+}
+
+body {
+    background: url("https://haitratancuong.com/wp-content/uploads/2021/09/tet-nguyen-dan-2022-tet-2022.jpg") right;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    margin-right: 20px;
+    height: 120px;
+    width: 120px;
+    border: 2px solid yellow;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.item p {
+    font-weight: 1000;
+    font-size: 18px;
+    color: black;
+}
+
+.item span {
+    font-size: 32px;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+
+
+/* ===============Iphone X============== */
+
+@media (max-width: 415px) {
+    body {
+        background: url("https://haitratancuong.com/wp-content/uploads/2021/09/tet-nguyen-dan-2022-tet-2022.jpg") top left;
+        background-size: 100%;
+        width: 100%;
+    };
+}
+
+@media (max-width: 376px) {
+    body {
+        background: url("https://haitratancuong.com/wp-content/uploads/2021/09/tet-nguyen-dan-2022-tet-2022.jpg") top left;
+        background-size: 100%;
+        width: 100%;
+    };
+}
+
+
+
+
+
+
+
+

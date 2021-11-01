@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+
+    <title>CountDown</title>
+</head>
+
+<body>
+    <div class="item">
+        <p>DAY</p>
+        <span id="days">Days</span>
+    </div>
+    <div class="item">
+        <p>HOUR</p>
+        <span id="hours">Hours</span>
+    </div>
+    <div class="item">
+        <p>MIN</p>
+        <span id="mins">Mins</span>
+    </div>
+    <div class="item">
+        <p>SEC</p>
+        <span id="secs">Secs</span>
+    </div>
+
+
+
+
+</body>
+
+<script>
+    let fuT = new Date("jan 1,2022 00:00:00").getTime()
+
+    setInterval( () => {
+        let noW = new Date().getTime()
+        let D = fuT - noW
+        let days = Math.floor(D/(1000*60*60*24))
+        let hours = Math.floor(D/(1000*60*60))
+        let mins = Math.floor(D/(1000*60))
+        let secs = Math.floor(D/(1000))
+
+        hours %= 24
+        mins %= 60
+        secs %= 60
+
+        document.getElementById("days").innerText = days
+        document.getElementById("hours").innerText = hours
+        document.getElementById("mins").innerText = mins
+        document.getElementById("secs").innerText = secs
+
+    }, 1000);
+
+</script>
+
+</html>
